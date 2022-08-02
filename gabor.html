@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gabor</title>
+    <link rel='stylesheet' href='gabor.css'>
+</head>
+<body>
+  <p id="instr" class="centred" hidden>In this task, you will be shown an image which consists of a circular configuration of 6 images.
+    Your task is to decide if <strong>one of the 6 images was of higher contrast</strong> than the others.
+    You will then be asked to judge your confidence in your response.<br><br>
+    If you can, please try to sit in a not too bright, indoor location where you can see the screen properly.
+    The first 5 trials are practice trials, where you will recieve feedback on your responses.
+    Please don't adjust the brightness of your screen after the practice trials<br><br>
+    Please press Spacebar, or click anywhere, to begin.
+  </p>
+  <div id='resp' class="centred" hidden>
+    <p id='resp_text'>Did the image contain a patch with higher contrast?<br>
+      <small><i>Answer 'yes' or 'no' by pressing <strong>Y</strong> or <strong>N</strong> on your keyboard, or click the buttons below</i></small>
+    </p>
+    <div id="buttons">
+      <div class="b_div"><input type="button" value="Yes" id="left" class="button"></div>
+      <div class="b_div"><input type="button" value="No" id="right" class="button"></div>
+    </div>
+  </div>
+  <canvas id="present" class="centred stim" hidden></canvas>
+  <canvas id="absent" class="centred stim" hidden></canvas>
+  <div id="conf" class="centred" hidden>
+    <label for="conf_sl" id="conf_l">Rate your confidence in your response:</label><br>
+    <span id="conf_instr">Click & drag the slider, or use the number keys (incl. either side of 1-9)<br>then press the 'enter' key, or click the button to submit.</span><br>
+    <input type="range" id="conf_sl" name="conf_sl" min="0" max="100" step="10" value="0"><br>
+    <span id="conf_val">0%</span><br><br>
+    <input type="button" id="conf_b" value="Submit">
+  </div>
+</body>
+<script src="gabor.js"></script>
+</html>
